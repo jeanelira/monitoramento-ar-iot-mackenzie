@@ -1,0 +1,496 @@
+[
+    {
+        "id": "6dd9f4658fcbe115",
+        "type": "tab",
+        "label": "MQ135 Check",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "f7afe8e36db60823",
+        "type": "arduino-board",
+        "device": "COM3"
+    },
+    {
+        "id": "de7dd8c8c7a16fbb",
+        "type": "mqtt-broker",
+        "name": "broker.mqtt-dashboard.com",
+        "broker": "broker.mqtt-dashboard.com",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "9f9938ddfbd7d525",
+        "type": "ui_tab",
+        "name": "MQ 135 - Air Quality Check",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "5133f4601a964c53",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "MQ 135 - Air Quality Check",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 144,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "3a92ca7eddb916a8",
+        "type": "ui_group",
+        "name": "Ar Quality",
+        "tab": "9f9938ddfbd7d525",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "de37b159dd06ecc2",
+        "type": "inject",
+        "z": "6dd9f4658fcbe115",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 730,
+        "y": 80,
+        "wires": [
+            [
+                "fbb67d448c5e4257"
+            ]
+        ]
+    },
+    {
+        "id": "d98f13cfbd4c4517",
+        "type": "inject",
+        "z": "6dd9f4658fcbe115",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 730,
+        "y": 160,
+        "wires": [
+            [
+                "fbb67d448c5e4257"
+            ]
+        ]
+    },
+    {
+        "id": "fbb67d448c5e4257",
+        "type": "mqtt out",
+        "z": "6dd9f4658fcbe115",
+        "name": "",
+        "topic": "integracao/rele",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "de7dd8c8c7a16fbb",
+        "x": 980,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "977f7202f5b9641d",
+        "type": "arduino in",
+        "z": "6dd9f4658fcbe115",
+        "name": "MQ135",
+        "pin": "4",
+        "state": "ANALOG",
+        "arduino": "f7afe8e36db60823",
+        "x": 510,
+        "y": 460,
+        "wires": [
+            [
+                "1b94b3cfab4c487e"
+            ]
+        ]
+    },
+    {
+        "id": "1b94b3cfab4c487e",
+        "type": "delay",
+        "z": "6dd9f4658fcbe115",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "5",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 700,
+        "y": 460,
+        "wires": [
+            [
+                "5c6d2ac02b462784",
+                "701891c2daa49faf",
+                "7a83c5aec8c17642",
+                "01c1a2468c8a9178"
+            ]
+        ]
+    },
+    {
+        "id": "5c6d2ac02b462784",
+        "type": "debug",
+        "z": "6dd9f4658fcbe115",
+        "name": "Valor MQ135",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 940,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "701891c2daa49faf",
+        "type": "ui_chart",
+        "z": "6dd9f4658fcbe115",
+        "name": "",
+        "group": "3a92ca7eddb916a8",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 910,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7a83c5aec8c17642",
+        "type": "switch",
+        "z": "6dd9f4658fcbe115",
+        "name": "Ar contaminado",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gte",
+                "v": "100",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 940,
+        "y": 320,
+        "wires": [
+            [
+                "32d95f30b1b49996"
+            ]
+        ]
+    },
+    {
+        "id": "32d95f30b1b49996",
+        "type": "function",
+        "z": "6dd9f4658fcbe115",
+        "name": "Liga Rele",
+        "func": "msg.payload = 1;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1140,
+        "y": 320,
+        "wires": [
+            [
+                "bdd75ba81d350c7a"
+            ]
+        ]
+    },
+    {
+        "id": "01c1a2468c8a9178",
+        "type": "switch",
+        "z": "6dd9f4658fcbe115",
+        "name": "Ar Limpo",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "lte",
+                "v": "100",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 920,
+        "y": 400,
+        "wires": [
+            [
+                "4304a972057c9adb"
+            ]
+        ]
+    },
+    {
+        "id": "4304a972057c9adb",
+        "type": "function",
+        "z": "6dd9f4658fcbe115",
+        "name": "Desliga Rele",
+        "func": "msg.payload = 0;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1150,
+        "y": 400,
+        "wires": [
+            [
+                "bdd75ba81d350c7a"
+            ]
+        ]
+    },
+    {
+        "id": "bdd75ba81d350c7a",
+        "type": "mqtt out",
+        "z": "6dd9f4658fcbe115",
+        "name": "",
+        "topic": "integracao/rele",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "de7dd8c8c7a16fbb",
+        "x": 1360,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "b2f9484afcf7bfc4",
+        "type": "mqtt in",
+        "z": "6dd9f4658fcbe115",
+        "name": "",
+        "topic": "integracao/rele",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "de7dd8c8c7a16fbb",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 720,
+        "y": 660,
+        "wires": [
+            [
+                "b43e66c684309621"
+            ]
+        ]
+    },
+    {
+        "id": "5054ba2d502f9a1c",
+        "type": "arduino out",
+        "z": "6dd9f4658fcbe115",
+        "name": "",
+        "pin": "9",
+        "state": "OUTPUT",
+        "arduino": "f7afe8e36db60823",
+        "x": 1150,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "b43e66c684309621",
+        "type": "function",
+        "z": "6dd9f4658fcbe115",
+        "name": "function 1",
+        "func": "if (msg.payload == \"1\") \n    msg.payload = 1;\nelse msg.payload = 0;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 900,
+        "y": 660,
+        "wires": [
+            [
+                "5054ba2d502f9a1c"
+            ]
+        ]
+    }
+]
